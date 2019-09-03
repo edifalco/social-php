@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//List movies
+Route::get('movies', 'MovieController@index');
+
+//Create new movie
+Route::get('addmovie/{title}/{release_year}', 'MovieController@addmovie');
+
+//Remove movie
+Route::get('removemovie/{title}', 'MovieController@removemovie');
